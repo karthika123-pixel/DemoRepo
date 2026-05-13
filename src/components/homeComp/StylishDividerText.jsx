@@ -1,5 +1,6 @@
 import React from "react";
 import { Box, Typography, Divider } from "@mui/material";
+import theme from '../../theme.js';
 
 const StylishDividerText = ({ text }) => {
   return (
@@ -28,7 +29,7 @@ const StylishDividerText = ({ text }) => {
           sx={{
             fontFamily: "'Pacifico', cursive !important",
             fontSize: { xs: "18px", sm: "20px" },
-            color: "#ff9401",
+            color: theme.palette.secondary.main,
             px: 2,
             textAlign: "center",
             textShadow: "1px 1px 3px rgba(0,0,0,0.1)",

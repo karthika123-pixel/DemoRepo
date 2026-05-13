@@ -13,6 +13,7 @@ import tool10 from "../../assets/tools/tools-15.png";
 import tool11 from "../../assets/tools/tools-16.png";
 import tool12 from "../../assets/tools/tools-18.png";
 import tool13 from "../../assets/tools/tools-19.png";
+import theme from '../../theme.js';
 
 const tools = [
   { id: 1, src: tool1 },
@@ -39,7 +40,7 @@ const ToolsSection = () => {
         pt: { xs: 4, sm: 6, md: 8 },
         pb: { xs: 4, sm: 6, md: 8 },
         background: "#ffffff",
-        color: "#111",
+        color: theme.palette.text.primary,
       }}
     >
       <Box sx={{ maxWidth: "1300px", mx: "auto", textAlign: "center", px: { xs: 2, sm: 3, md: 4 } }}>
@@ -58,7 +59,7 @@ const ToolsSection = () => {
           sx={{
             width: { xs: 50, sm: 70, md: 100 },
             height: { xs: "3px", sm: "4px" },
-            backgroundColor: "#ff8c42",
+            backgroundColor: theme.palette.secondary.main,
             borderRadius: "6px",
             mx: "auto",
             mb: { xs: 2, sm: 2.5, md: 3 },
@@ -137,9 +138,9 @@ const ToolsSection = () => {
               borderRadius: "30px",
               fontWeight: 600,
               textTransform: "none",
-              backgroundColor: "#ff8c42",
+              backgroundColor: theme.palette.secondary.main,
               "&:hover": {
-                backgroundColor: "#e6762f",
+                backgroundColor: theme.palette.secondary.main,
               },
             }}
             onClick={() => (window.location.href = "/us/software/tools-we-use/")}

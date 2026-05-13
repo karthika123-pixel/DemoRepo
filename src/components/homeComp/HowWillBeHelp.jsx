@@ -1,5 +1,6 @@
 import React from "react";
 import { Box, Container, Grid, Typography, useTheme, useMediaQuery } from "@mui/material";
+import theme from '../../theme.js';
 
 const items = [
   {
@@ -46,7 +47,7 @@ const IndustriesSection = () => {
         textAlign: "center",
         position: "relative",
         overflow: "hidden",
-        backgroundColor: "#143024",
+        backgroundColor: theme.palette.primary.main,
       }}
     >
       {/* Top-left circle */}
@@ -69,7 +70,7 @@ const IndustriesSection = () => {
         <Typography
           variant="subtitle2"
           sx={{
-            color: "#ff9401",
+            color: theme.palette.secondary.main,
             textTransform: "uppercase",
             letterSpacing: 2,
             fontWeight: 600,
@@ -107,7 +108,7 @@ const IndustriesSection = () => {
                   "&:hover": {
                     transform: "translateY(-8px)",
                     background: "rgba(255,255,255,0.10)",
-                    border: "1px solid #ff9401",
+                    border: `1px solid ${theme.palette.secondary.main}`,
                     boxShadow: "0 0 18px rgba(255, 148, 1, 0.35)",
                   },
                 }}
@@ -115,7 +116,7 @@ const IndustriesSection = () => {
                 <Typography
                   variant="h6"
                   sx={{
-                    color: "#ff9401",
+                    color: theme.palette.secondary.main,
                     fontWeight: 700,
                     mb: 1,
                     fontFamily: "'Poppins', sans-serif",

@@ -2,6 +2,7 @@ import React from "react";
 import { Box, Container, Typography, Grid } from "@mui/material";
 import StylishDividerText from "./StylishDividerText";
 import work from "../../assets/work.webp";
+import theme from '../../theme.js';
 const steps = [
   {
     number: "01",
@@ -28,7 +29,7 @@ const HowWeWorkSection = () => {
     <Box
       sx={{
         pt: { xs: 8, md: 0 }, pb: { xs: 8, md: 12 },pl: { md: 12 },
-        backgroundColor: "#f6f6f6",
+        backgroundColor: theme.palette.background.default,
       }}
     >
       <Container maxWidth="lg">
@@ -71,7 +72,7 @@ const HowWeWorkSection = () => {
             mb: 3.5,
             pt:3,
             fontFamily: "'Poppins', sans-serif",
-            color: "#1d4230",
+            color: theme.palette.primary.main,
           }}
         >
          How We Work
@@ -95,7 +96,7 @@ const HowWeWorkSection = () => {
                     height: 60,
                     borderRadius: "12px",
                     backgroundColor:
-                      index === 1 ? "#ff9401" : "#1d4230",
+                      index === 1 ? theme.palette.secondary.main : theme.palette.primary.main,
                     color: "#fff",
                     fontWeight: 700,
                     fontSize: "1.2rem",
@@ -117,7 +118,7 @@ const HowWeWorkSection = () => {
                       fontWeight: 600,
                       mb: 1,
                       fontFamily: "'Poppins', sans-serif",
-                      color: "#1d4230",
+                      color: theme.palette.primary.main,
                     }}
                   >
                     {step.title}
@@ -127,7 +128,7 @@ const HowWeWorkSection = () => {
                     variant="body2"
                     sx={{
                       lineHeight: 1.8,
-                      color: "#555",
+                      color: theme.palette.text.secondary,
                       maxWidth: "500px",
                     }}
                   >

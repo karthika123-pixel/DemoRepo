@@ -1,56 +1,44 @@
 import React from "react";
-import { ThemeProvider, CssBaseline } from "@mui/material";
+import { CssBaseline, ThemeProvider } from "@mui/material";
 import theme from "../theme";
-import MiltaAccountingOverview from "../components/aboutusComp/MiltaAccountingOverview";
-import OurStrengthsSection from "../components/aboutusComp/OurStrengthsSection";
-
-
-// Components
-import Team from "../components/aboutusComp/Team";
-import SaleSupport from "../components/aboutusComp/SaleSupport";
-import ServicesCarousel from "../components/homeComp/ServicesCarousel";
-import MdIntro from "../components/aboutusComp/MdIntro";
-import CTASection from "../components/common/CtaSection"; // single import
-import HeroSection from "../components/aboutusComp/HeroSec";
-import Path from "../components/aboutusComp/Path";
-import PartnerSection from "../components/aboutusComp/PartnerSection";
+import {
+  AboutHero,
+  ClientStrip,
+  CtaSection,
+  InsightsSection,
+  TeamSection,
+  TestimonialSection,
+  WhyChooseMilta,
+} from "../us-components/aboutComp/index.js";
 import useFullSEO from "../utils/useFullSEO";
-import Whoweare from "../components/homeComp/Whoweare";
 
 function App() {
-
   useFullSEO({
-    // MAIN SEO
-    title: "Trusted Partner for Accounting Outsourcing Servicesfor Small Business",
+    title: "About Us - Milta Accounting Services",
     description:
-      "We specialize in providing exceptional accounting outsourcing services customized specifically for small businesses in the USA. We understand your unique needs and provide tailored solutions to help you grow your business.",
+      "Learn how Milta supports growing businesses with reliable bookkeeping, payroll, tax planning, reporting, and finance operations support.",
     keywords:
-      "business outsourcing services, accounting services for small business, finance and accounting outsourcing, outsource accounting services, virtual cfo services.",
+      "about Milta, outsourced accounting support, bookkeeping partner USA, payroll and tax support, small business finance team",
     author: "Milta Accounting",
     canonical: "https://miltafs.com/about",
-
-    ogTitle: "Trusted Partner for Accounting Outsourcing Servicesfor Small Business",
-    ogDescription: "We specialize in providing exceptional accounting outsourcing services customized specifically for small businesses in the USA. We understand your unique needs and provide tailored solutions to help you grow your business.",
+    ogTitle: "About Us - Milta Accounting Services",
+    ogDescription:
+      "Learn how Milta supports growing businesses with reliable bookkeeping, payroll, tax planning, reporting, and finance operations support.",
     ogImage: "https://www.miltafs.com/images/miltafs-og.jpg",
     ogUrl: "https://miltafs.com/about",
-
   });
 
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
       <main>
-        <HeroSection />
-        <Team />
-        <SaleSupport />
-        <MiltaAccountingOverview />
-        <PartnerSection />
-
-        <Path />
-        <CTASection />
-
-        <OurStrengthsSection />
-        <Whoweare />
+        <AboutHero />
+        <WhyChooseMilta />
+        <ClientStrip />
+        <InsightsSection />
+        <TestimonialSection />
+        <TeamSection />
+        <CtaSection />
       </main>
     </ThemeProvider>
   );

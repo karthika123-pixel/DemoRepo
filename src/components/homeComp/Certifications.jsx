@@ -12,6 +12,7 @@ import cert7 from "@/assets/certification-7.png";
 import cert8 from "@/assets/certification-8.jpg";
 import cert9 from "@/assets/certification-9.jpg";
 import cert10 from "@/assets/certification-10.png";
+import theme from '../../theme.js';
 
 const certifications = [
   cert1, cert2, cert3, cert4, cert5, cert6, cert7, cert8, cert9, cert10,
@@ -29,7 +30,7 @@ const CertificationSection = () => {
       sx={{
         py: 3,
         px: 2,
-        backgroundColor: "#f6f6f6",
+        backgroundColor: theme.palette.background.default,
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
@@ -42,7 +43,7 @@ const CertificationSection = () => {
         textAlign="center"
         gutterBottom
         sx={{
-          color: "#1d4230",
+          color: theme.palette.primary.main,
           textTransform: "capitalize",
           fontFamily: "'Poppins', sans-serif",
           fontWeight: 700,

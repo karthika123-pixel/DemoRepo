@@ -1,15 +1,15 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
-import Header from "../components/common/Header";
-import Footer from "../components/common/Footer3";
-import ScrollToTop from "../components/common/ScrollToTop";
-import StickyButtons from "../components/common/StickyButtons";
-import Home from "../pages/Home";
-import Contact from "../pages/ContactUs";
-import About from "../pages/AboutUs";
+import Header from "../us-components/common/Header";
+import Footer from "../us-components/common/Footer3";
+import ScrollToTop from "../us-components/common/ScrollToTop";
+import StickyButtons from "../us-components/common/StickyButtons";
+import UsTempHome from "../us-pages/Home";
+import About from "../us-pages/About";
+import Contact from "../us-pages/ContactUs";
 import Services from "../pages/Services";
-import BookkeepingServicePage from "../pages/BookkeepingServicePage";
 import FAQ from "../pages/FAQ";
+import BookkeepingServicePage from "../pages/BookkeepingServicePage";
 import DataEntryServices from "../pages/DataEntryServices";
 import FinancialControllerServices from "../pages/FinancialControllerServices";
 import VirtualAssistantServices from "../pages/VirtualAssistantServices";
@@ -25,10 +25,10 @@ import RealEstateCompanies from "../pages/RealEstateCompanies";
 import NonProfitOrganizations from "../pages/NonProfitOrganizations";
 import PrivacyPolicy from "../pages/PrivacyPolicy";
 import TermsofService from "../pages/TermsofService";
-import Career from "../pages/Career";
-import CareerSub from "../pages/careersub";
-import Blog from "../pages/Blog";
-import BlogDetails from "../pages/BlogDetails";
+import Career from "../us-pages/Career";
+import CareerSub from "../us-pages/careersub";
+import Blog from "../us-pages/Blog";
+import BlogDetails from "../us-pages/BlogDetails";
 import DigitalMarketing from "../pages/DigitalMarketing";
 import ApplyForm from "../components/ApplyForm";
 import QuickBooksDesktop from "../pages/QuickBooksDesktop";
@@ -39,8 +39,6 @@ import AccountingSoftware from "../pages/AccountingSoftware";
 import AddBlog from "../pages/Addblog";
 import Payroll from "../pages/PayrollService";
 import Areas from "../pages/Areas";
-
-
 
 /* ---------- State-wise Bookkeeping Pages ---------- */
 import BookkeepingCT from "../states/Connecticut/Bookkeeping";
@@ -166,7 +164,7 @@ import PsNC from "../states/NorthCarolina/Payroll";
 import PsVI from "../states/Virginia/Payroll";
 import PsCA from "../states/California/Payroll";
 import PsTE from "../states/Texas/Payroll";
-import Ticker from "../components/common/Ticker";
+import Ticker from "../us-components/common/Ticker";
 
 function App() {
   return (
@@ -176,14 +174,14 @@ function App() {
       <Header />
 
 
-        <Routes>
+      <Routes>
 
         {/* -------- Main Pages -------- */}
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<UsTempHome />} />
+        <Route path="/us-temp" element={<UsTempHome />} />
         <Route path="/about" element={<About />} />
         <Route path="/services" element={<Services />} />
         <Route path="/contact" element={<Contact />} />
-
         <Route path="/faqs" element={<FAQ />} />
 
         {/* -------- Services -------- */}
@@ -211,33 +209,77 @@ function App() {
           path="/us/services/best-cpa-services-for-small-businesses-in-the-usa/"
           element={<CPAServices />}
         />
+        <Route
+          path="/us/services/payroll-management-services-in-the-usa/"
+          element={<Payroll />}
+        />
+        <Route
+          path="/us/services/best-digital-marketing-agency-in-usa/"
+          element={<DigitalMarketing />}
+        />
 
         {/* -------- Industries -------- */}
-        <Route path="/us/industry/bookkeeping-for-contractors-companies/" element={<ConstructorCompanies />} />
-        <Route path="/us/industry/accounting-services-for-manufacturing/" element={<ManufacturingCompanies />} />
-        <Route path="/us/industry/accounting-services-for-healthcare/" element={<HealthcareIndustry />} />
-        <Route path="/us/industry/accounting-services-for-lawfirms/" element={<LawyersIndustry />} />
-        <Route path="/us/industry/accounting-services-for-nonprofit-organizations/" element={<NonProfitOrganizations />} />
-        <Route path="/us/industry/bookkeeping-for-real-estate-companies/" element={<RealEstateCompanies />} />
-        <Route path="/us/industry/accounting-services-for-restaurant-businesses/" element={<RestaurantIndustries />} />
-        <Route path="/us/industry/accounting-services-for-retail-businesses/" element={<RetailIndustry />} />
-        <Route path="/us/services/payroll-management-services-in-the-usa/" element={<Payroll />} />
+        <Route
+          path="/us/industry/bookkeeping-for-contractors-companies/"
+          element={<ConstructorCompanies />}
+        />
+        <Route
+          path="/us/industry/accounting-services-for-manufacturing/"
+          element={<ManufacturingCompanies />}
+        />
+        <Route
+          path="/us/industry/accounting-services-for-healthcare/"
+          element={<HealthcareIndustry />}
+        />
+        <Route
+          path="/us/industry/accounting-services-for-lawfirms/"
+          element={<LawyersIndustry />}
+        />
+        <Route
+          path="/us/industry/accounting-services-for-nonprofit-organizations/"
+          element={<NonProfitOrganizations />}
+        />
+        <Route
+          path="/us/industry/bookkeeping-for-real-estate-companies/"
+          element={<RealEstateCompanies />}
+        />
+        <Route
+          path="/us/industry/accounting-services-for-restaurant-businesses/"
+          element={<RestaurantIndustries />}
+        />
+        <Route
+          path="/us/industry/accounting-services-for-retail-businesses/"
+          element={<RetailIndustry />}
+        />
 
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         <Route path="/terms-of-service" element={<TermsofService />} />
         <Route path="/career" element={<Career />} />
         <Route path="/career-opportunities" element={<CareerSub />} />
         <Route path="/blogs" element={<Blog />} />
+        <Route path="/us/blogs" element={<Blog />} />
         <Route path="/us/blogs/:slug" element={<BlogDetails />} />
-        <Route path="/us/services/best-digital-marketing-agency-in-usa/" element={<DigitalMarketing />} />
-
         <Route path="/apply" element={<ApplyForm />} />
-        <Route path="/us/software/bookkeeping-with-quickbook-desktop/" element={<QuickBooksDesktop />} />
-        <Route path="/us/software/bookkeeping-with-quickbook-online/" element={<QuickBooksOnline />} />
-        <Route path="/us/software/xero-for-small-business/" element={<Xero />} />
-        <Route path="/us/software/wave-accounting-for-small-business/" element={<WaveAccounting />} />
-        <Route path="/us/software/tools-we-use/" element={<AccountingSoftware />} />
-
+        <Route
+          path="/us/software/bookkeeping-with-quickbook-desktop/"
+          element={<QuickBooksDesktop />}
+        />
+        <Route
+          path="/us/software/bookkeeping-with-quickbook-online/"
+          element={<QuickBooksOnline />}
+        />
+        <Route
+          path="/us/software/xero-for-small-business/"
+          element={<Xero />}
+        />
+        <Route
+          path="/us/software/wave-accounting-for-small-business/"
+          element={<WaveAccounting />}
+        />
+        <Route
+          path="/us/software/tools-we-use/"
+          element={<AccountingSoftware />}
+        />
         <Route path="/add-blog" element={<AddBlog />} />
         <Route path="/areas-we-serve" element={<Areas />} />
 
@@ -373,6 +415,7 @@ function App() {
       </Routes>
       <StickyButtons />
       <Footer />
+
     </>
   );
 }

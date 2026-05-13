@@ -14,6 +14,7 @@ import work1 from "../../assets/money-2.webp";
 import work2 from "../../assets/money-3.webp";
 import work3 from "../../assets/Accounts1.webp";
 import work4 from "../../assets/Accountable-4.webp";
+import theme from '../../theme.js';
 
 
 const slides = [
@@ -161,7 +162,7 @@ export default function BannerSlider() {
                         variant="contained"
                         onClick={() => navigate(slide.link)}
                         sx={{
-                          background: "#ff9401",
+                          background: theme.palette.secondary.main,
                           color: "#fff",
                           fontWeight: 600,
                           px: { xs: 4, md: 5 },

@@ -5,6 +5,7 @@ import AccountBalanceIcon from "@mui/icons-material/AccountBalance";
 import AssignmentIcon from "@mui/icons-material/Assignment";
 import ReceiptLongIcon from "@mui/icons-material/ReceiptLong";
 import BarChartIcon from "@mui/icons-material/BarChart";
+import theme from '../../theme.js';
 
 const professionals = [
   {
@@ -85,7 +86,7 @@ const HireDedicatedProfessionals = () => {
             fontWeight: 700,
             mb: { xs: 4, md: 6 },
             fontSize: { xs: "1.9rem", md: "2.4rem" },
-            color: "#1d4230",
+            color: theme.palette.primary.main,
           }}
         >
           Hire Dedicated Accounting Professionals
@@ -123,13 +124,13 @@ const HireDedicatedProfessionals = () => {
                     "&:hover": {
                       transform: "translateY(-8px)",
                       boxShadow: "0 10px 30px rgba(0,0,0,0.12)",
-                      borderColor: "#ff9401",
+                      borderColor: theme.palette.secondary.main,
                     },
                   }}
                 >
                   <Box
                     sx={{
-                      background: "linear-gradient(135deg, #1d4230, #143024)",
+                      background: `linear-gradient(135deg, ${theme.palette.primary.main}, ${theme.palette.primary.main})`,
                       width: 70,
                       height: 70,
                       borderRadius: "50%",
@@ -139,14 +140,14 @@ const HireDedicatedProfessionals = () => {
                       mb: 2,
                     }}
                   >
-                    <Icon sx={{ color: "#ff9401", fontSize: 34 }} />
+                    <Icon sx={{ color: theme.palette.secondary.main, fontSize: 34 }} />
                   </Box>
 
                   <Typography
                     sx={{
                       fontWeight: 700,
                       fontSize: "1.15rem",
-                      color: "#1d4230",
+                      color: theme.palette.primary.main,
                       mb: 1,
                     }}
                   >

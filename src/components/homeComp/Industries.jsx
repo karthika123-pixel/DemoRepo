@@ -1,5 +1,6 @@
 import React from "react";
 import { Container, Grid, Box, Typography } from "@mui/material";
+import theme from '../../theme.js';
 
 const industries = [
   { name: "Hospitality", count: 2853 },

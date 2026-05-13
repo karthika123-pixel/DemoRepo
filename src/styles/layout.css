@@ -29,9 +29,31 @@
   gap: 30px;
 }
 
+/* ================= IMAGE UTILITIES ================= */
+.uk-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: var(--uk-radius);
+}
+
+.uk-image-responsive {
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
 /* ================================================= */
 /* ================= RESPONSIVE LAYOUT ================= */
 /* ================================================= */
+
+/* Large Desktop (≥1025px) */
+@media (min-width: 1025px) {
+  .uk-container {
+    max-width: 1280px;
+  }
+}
 
 /* Tablets (≤1024px) */
 @media (max-width: 1024px) {
@@ -69,5 +91,22 @@
 
   .uk-grid {
     gap: 14px;
+    grid-template-columns: 1fr;
+  }
+
+  .uk-flex {
+    flex-direction: column;
+    gap: 12px;
+  }
+}
+
+/* Extra Small Mobile (≤360px) */
+@media (max-width: 360px) {
+  .uk-container {
+    padding: 0 8px;
+  }
+
+  .uk-grid {
+    gap: 12px;
   }
 }

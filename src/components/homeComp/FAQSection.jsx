@@ -9,6 +9,7 @@ import {
 } from "@mui/material";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import StylishDividerText from "../homeComp/StylishDividerText";
+import theme from '../../theme.js';
 
 const FAQSection = ({
   title = "FAQs About Milta Accounting Services",
@@ -72,7 +73,7 @@ const FAQSection = ({
             variant="h4"
             sx={{
               fontWeight: 700,
-              color: "#1d4230",
+              color: theme.palette.primary.main,
               fontFamily: "'Poppins', sans-serif",
               mb: 4,
               textAlign: "center",
@@ -101,10 +102,10 @@ const FAQSection = ({
             }}
           >
             <AccordionSummary
-              expandIcon={<ExpandMoreIcon sx={{ color: "#1d4230" }} />}
+              expandIcon={<ExpandMoreIcon sx={{ color: theme.palette.primary.main }} />}
               sx={{
                 fontWeight: 600,
-                color: "#1d4230",
+                color: theme.palette.primary.main,
                 fontFamily: "'Poppins', sans-serif",
                 textAlign: "left",
               }}

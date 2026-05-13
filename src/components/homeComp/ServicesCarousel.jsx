@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Box, Typography, Button, Card, Grid } from "@mui/material";
 import StylishDividerText from "./StylishDividerText";
 import ContactPopup from "../common/ContactPopup";
+import theme from '../../theme.js';
 
 const services = [
   {
@@ -34,7 +35,7 @@ const ServicesSection = () => {
         py: { xs: 3, sm:3,md: 4 },
         position: "relative",
         overflow: "hidden",
-        background: "linear-gradient(135deg, #0d3731 0%, #0a2a27 100%)",
+        background: `linear-gradient(135deg, ${theme.palette.primary.main} 0%, ${theme.palette.primary.main} 100%)`,
         "&::before, &::after": {
           content: '""',
           position: "absolute",
@@ -46,14 +47,14 @@ const ServicesSection = () => {
         "&::before": {
           width: 250,
           height: 250,
-          background: "radial-gradient(circle, #ff9401 0%, transparent 70%)",
+          background: `radial-gradient(circle, ${theme.palette.secondary.main} 0%, transparent 70%)`,
           top: -60,
           left: -60,
         },
         "&::after": {
           width: 300,
           height: 300,
-          background: "radial-gradient(circle, #00ffc3 0%, transparent 70%)",
+          background: `radial-gradient(circle, ${theme.palette.secondary.main} 0%, transparent 70%)`,
           bottom: -100,
           right: -80,
         },
@@ -101,7 +102,7 @@ const ServicesSection = () => {
               alignItems: "center",
               justifyContent: "space-between",
               background: "rgba(255, 148, 1, 0.9)",
-              color: "#0d3731",
+              color: theme.palette.primary.main,
               boxShadow: "0 12px 40px rgba(0,0,0,0.25)",
               backdropFilter: "blur(6px)",
               transition: "all 0.3s ease",
@@ -125,14 +126,14 @@ const ServicesSection = () => {
                 variant="contained"
                 sx={{
                   mt: 2,
-                  backgroundColor: "#0d3731",
-                  color: "#ff9401",
+                  backgroundColor: theme.palette.primary.main,
+                  color: theme.palette.secondary.main,
                   fontWeight: 700,
                   textTransform: "capitalize",
                   px: 5,
                   py: 1,
                   borderRadius: "30px",
-                  "&:hover": { backgroundColor: "#091f1c" },
+                  "&:hover": { backgroundColor: theme.palette.primary.main },
                 }}
               >
                 Book a Consultation
@@ -157,7 +158,7 @@ const ServicesSection = () => {
                 flexDirection: "column",
                 alignItems: "center",
                 background: "#fff",
-                color: "#0d3731",
+                color: theme.palette.primary.main,
                 boxShadow: "0 8px 24px rgba(0,0,0,0.1)",
                 transition: "all 0.3s ease",
                 "&:hover": {

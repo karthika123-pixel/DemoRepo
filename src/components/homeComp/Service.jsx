@@ -18,6 +18,7 @@ import {
 } from "@mui/icons-material";
 import StylishDividerText from "./StylishDividerText";
 import { Link } from "react-router-dom";
+import theme from '../../theme.js';
 
 const services = [
   {
@@ -69,7 +70,7 @@ const ServicesSection = () => {
     <Box
       sx={{
         pt: 4,pb: 9,
-        backgroundColor: "#f9f9f9",
+        backgroundColor: theme.palette.background.default,
         display: "flex",
         justifyContent: "center",
       }}
@@ -84,7 +85,7 @@ const ServicesSection = () => {
           textAlign="center"
           gutterBottom
           sx={{
-            color: "#1d4230",
+            color: theme.palette.primary.main,
             textTransform: "capitalize",
             fontFamily: "'Poppins', sans-serif",
             fontWeight: 700,
@@ -128,14 +129,14 @@ const ServicesSection = () => {
                   transform: "translateY(-10px) scale(1.02)",
                   boxShadow:
                     "0 12px 30px rgba(0,0,0,0.15), inset 0 0 15px rgba(255,255,255,0.3)",
-                  background: "linear-gradient(145deg, #1d4230, #245b44)",
+                  background: `linear-gradient(145deg, ${theme.palette.primary.main}, ${theme.palette.primary.main})`,
                   "& .service-title, & .service-desc, & .service-icon": {
                     color: "#fff",
                     WebkitTextFillColor: "#fff",
                   },
                   "& .service-btn": {
                     background: "#fff",
-                    color: "#1d4230",
+                    color: theme.palette.primary.main,
                   },
                 },
               }}
@@ -145,7 +146,7 @@ const ServicesSection = () => {
                   className="service-icon"
                   sx={{
                     mb: 2,
-                    background: "linear-gradient(135deg, #1d4230, #245b44)",
+                    background: `linear-gradient(135deg, ${theme.palette.primary.main}, ${theme.palette.primary.main})`,
                     WebkitBackgroundClip: "text",
                     WebkitTextFillColor: "transparent",
                     transition: "all 0.4s ease",
@@ -173,7 +174,7 @@ const ServicesSection = () => {
                   variant="body2"
                   className="service-desc"
                   sx={{
-                    color: "#555",
+                    color: theme.palette.text.secondary,
                     mb: 3,
                     px: 1,
                     lineHeight: 1.6,
@@ -190,7 +191,7 @@ const ServicesSection = () => {
                   variant="contained"
                   className="service-btn"
                   sx={{
-                    background: "linear-gradient(to right, #1d4230, #245b44)",
+                    background: `linear-gradient(to right, ${theme.palette.primary.main}, ${theme.palette.primary.main})`,
                     borderRadius: "30px",
                     px: 4,
                     py: 1.2,

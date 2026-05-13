@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Box, Typography, Grid, Button } from "@mui/material";
 import StylishDividerText from "./StylishDividerText";
 import ContactPopup from "../common/ContactPopup";
+import theme from '../../theme.js';
 
 const steps = [
   {
@@ -33,7 +34,7 @@ const ServicesSection = () => {
     <Box
       sx={{
         pt: { xs: 6, md: 5 },pb: { xs: 6, md: 12 },
-        backgroundColor: "#f6f6f6",
+        backgroundColor: theme.palette.background.default,
       }}
     >
       <Box
@@ -43,7 +44,7 @@ const ServicesSection = () => {
           px: { xs: 2, md: 4 },
         }}
       >
-        <StylishDividerText text="How We Work" color="#0d3731" />
+        <StylishDividerText text="How We Work" color={theme.palette.primary.main} />
 
         <Typography
           variant="h4"
@@ -51,7 +52,7 @@ const ServicesSection = () => {
           sx={{
             fontWeight: 700,
             mb: 2,
-            color: "#0d3731",
+            color: theme.palette.primary.main,
             fontSize: { xs: "1.6rem", md: "2.3rem" },
           }}
         >
@@ -64,7 +65,7 @@ const ServicesSection = () => {
             maxWidth: "750px",
             mx: "auto",
             mb: { xs: 5, md: 8 },
-            color: "#555",
+            color: theme.palette.text.secondary,
             fontSize: { xs: "0.95rem", md: "1rem" },
             lineHeight: 1.7,
           }}
@@ -97,7 +98,7 @@ const ServicesSection = () => {
                   flexDirection: "column",
                   justifyContent: "flex-start",
                   backgroundColor: "#ffffff",
-                  color: "#0d3731",
+                  color: theme.palette.primary.main,
                   boxShadow: "0 10px 25px rgba(0,0,0,0.06)",
                   transition: "all 0.3s ease",
                 }}
@@ -108,7 +109,7 @@ const ServicesSection = () => {
                     fontWeight: 700,
                     mb: 2,
                     fontSize: "1.1rem",
-                    color: "#0d3731",
+                    color: theme.palette.primary.main,
                   }}
                 >
                   {step.title}
@@ -119,7 +120,7 @@ const ServicesSection = () => {
                     fontSize: "0.95rem",
                     lineHeight: 1.6,
                     mb: step.button ? 3 : 0,
-                    color: "#555555",
+                    color: theme.palette.text.secondary,
                   }}
                 >
                   {step.description}
@@ -130,12 +131,12 @@ const ServicesSection = () => {
                     variant="contained"
                     onClick={handleClick}
                     sx={{
-                      backgroundColor: "#0d3731",
+                      backgroundColor: theme.palette.primary.main,
                       textTransform: "none",
                       fontWeight: 600,
                       borderRadius: "30px",
                       "&:hover": {
-                        backgroundColor: "#082320",
+                        backgroundColor: theme.palette.primary.main,
                       },
                     }}
                   >
