@@ -38,7 +38,7 @@ import UkWhyMilta from "../uk-pages/WhyMilta";
 import UkVirtualAssistance from "../uk-pages/VirtualAssistance";
 import AddBlog from "../uk-pages/Addblog";
 import PrivacyPolicy from "../uk-pages/PrivacyPolicy";
-import TermsOfService from "../uk-pages/TermsOfService";
+import TermsOfService from "../uk-pages/TermsofService";
 
 import ConstructorCompanies from "../uk-pages/Contractors";
 
